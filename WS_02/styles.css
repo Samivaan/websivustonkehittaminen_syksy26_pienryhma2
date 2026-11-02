@@ -1,0 +1,18 @@
+:root
+    p {
+      color: rgb(180, 177, 35);
+    }
+    
+    body {
+      background-color: rgb(131, 102, 102);
+    }
+    
+    h1 {
+      font-size: 4em;
+    }
+    .content-box {
+  padding: 100px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
