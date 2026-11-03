@@ -1,0 +1,65 @@
+:root
+    p {
+      color: rgb(180, 177, 35);
+    }
+    
+    body {
+      background-color: rgb(131, 102, 102);
+    }
+    
+    h1 {
+      font-size: 4em;
+    }
+    .content-box {
+  padding: 100px;
+  margin: 20px;
+  background-color: #5d5555;
+  border: 1px solid #ccc;
+}
+
+.content-box {
+  text-align: center;
+}
+.transition-button {
+        background-color: lightblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .transition-button:hover {
+        background-color: rgb(57, 114, 200);
+      }
+      .animation-box {
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+        background-color: lightgreen;
+        position: relative;
+        animation: move 0.8s infinite alternate;
+      }
+      
+      @keyframes move {
+        from {
+          left: 0;
+        }
+        to {
+          left: 1825px;
+        }
+      }
+      .pseudo-list li:nth-child(odd) {
+        background-color: rgb(132, 218, 27);
+      }
+      
+      .pseudo-list li:nth-child(even) {
+        background-color: rgb(63, 109, 210);
+      }
+      .filter-image {
+        filter: grayscale(800%);
+        transition: filter 0.3s ease;
+      }
+      
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
