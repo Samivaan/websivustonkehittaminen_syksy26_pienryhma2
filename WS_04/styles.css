@@ -17,19 +17,19 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
+  grid-gap: 15px;
 }
 
 .grid-heading {
   grid-column: 1 / -1; /* Spans from the first track to the very last track */
   margin-bottom: 8px;
   text-align: center;
-  background-color: rgb(62, 135, 230);
+  background-color: rgb(88, 150, 230);
 }
 
 .grid-item {
 opacity: 0.5;
-  background-color: rgb(62, 135, 230);
+  background-color: rgb(62, 199, 73);
   border:#2b2323 solid 5px;
   padding: 20px;
   text-align: center;
