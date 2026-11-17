@@ -1,0 +1,183 @@
+body {
+    /* Path to your image file */
+    background-image: url('kissalol.jpg'); 
+    
+    /* Prevents the image from repeating/tiling if it is smaller than the screen */
+    background-repeat: no-repeat; 
+    
+    /* Centers the background image */
+    background-position: center; 
+    
+    /* Scales the image to completely cover the entire viewport without stretching */
+    background-size: cover; 
+    
+    /* Keeps the background fixed in place so it does not move when scrolling */
+    background-attachment: fixed; 
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+}
+
+.grid-heading {
+  grid-column: 1 / -1; /* Spans from the first track to the very last track */
+  margin-bottom: 8px;
+  text-align: center;
+  background-color: rgb(88, 150, 230);
+}
+
+.grid-item {
+opacity: 0.5;
+  background-color: rgb(62, 199, 73);
+  border:#2b2323 solid 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+.flex-container {
+    opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  background-color: lightblue;
+  border: 5px solid #2b2323;
+  padding: 60px;
+  text-align: center;
+}
+.responsive-box {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: rgb(223, 21, 21);
+  }
+}
+
+@media (min-width: 601px) {
+  .responsive-box {
+    background-color: rgb(144, 229, 17);
+  }
+}
+.responsive-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .column {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .media-query-box {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      .media-query-box {
+        background-color: lightcoral;
+      }
+    }
+    
+    @media (min-width: 601px) {
+      .media-query-box {
+        background-color: lightblue;
+      }
+    }
+    .responsive-nav {
+  position: relative;
+  display: inline-block;
+}
+
+/* Desktop: hide button, show links side-by-side */
+.menu-toggle {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #c2df2f;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile (under 600px): show button, hide links until clicked */
+@media (max-width: 600px) {
+  .menu-toggle {
+    background-color: #bee925;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .nav-list {
+    display: none; /* Hidden by default on small screens */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin-top: 5px;
+    min-width: 150px;
+    background-color: #9fcb31;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  /* JS adds '.active' when clicked, which overrides display: none */
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .nav-list li a:hover {
+    background-color: #88d820;
+  }
+}
+
+.responsive-container {
+  display: flex;
+  gap: 15px; /* Space between the two boxes */
+}
+
+/* Styles ONLY the bottom two columns as boxes */
+.responsive-container .column {
+  flex: 1; /* Makes both boxes equal width */
+  border: 2px solid #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
